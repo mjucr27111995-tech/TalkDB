@@ -4,19 +4,16 @@ Talk to your database in plain English. TalkDB converts natural language questio
 
 ## Screenshots
 
-### Welcome Screen
-![Welcome Screen](screenshots/01_welcome.png)
-
 ### Query Response — Answer + SQL + Results + Explanation
-![Query Response](screenshots/02_query_response.png)
+![Query Response](screenshots/screenshot_01.png)
 
-### Conversation Memory — Follow-up Questions
-> User asks *"Which city has the most customers?"* → then *"What products did they order?"* — TalkDB resolves "they" to San Francisco automatically.
+### Conversation Memory — Follow-up Question
+> User asks *"Which city has the most customers?"* → then *"What products did they order?"* — TalkDB resolves "they" to San Francisco automatically using conversation memory.
 
-![Conversation Memory](screenshots/03_conversation_memory.png)
+![Conversation Memory](screenshots/screenshot_02.png)
 
-### SQL Generation with Schema Explorer
-![First Question](screenshots/04_first_question.png)
+### Generated SQL with Results & Step-by-Step Explanation
+![SQL Results Explanation](screenshots/screenshot_03.png)
 
 ## Features
 
