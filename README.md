@@ -2,6 +2,22 @@
 
 Talk to your database in plain English. TalkDB converts natural language questions into SQL using RAG (Retrieval-Augmented Generation) with conversation memory, query caching, SQL explanations, and auto-visualization.
 
+## Screenshots
+
+### Welcome Screen
+![Welcome Screen](screenshots/01_welcome.png)
+
+### Query Response — Answer + SQL + Results + Explanation
+![Query Response](screenshots/02_query_response.png)
+
+### Conversation Memory — Follow-up Questions
+> User asks *"Which city has the most customers?"* → then *"What products did they order?"* — TalkDB resolves "they" to San Francisco automatically.
+
+![Conversation Memory](screenshots/03_conversation_memory.png)
+
+### SQL Generation with Schema Explorer
+![First Question](screenshots/04_first_question.png)
+
 ## Features
 
 - **Natural Language to SQL** — Ask questions in English, get SQL + results + a plain-English answer
