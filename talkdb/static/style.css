@@ -1,0 +1,220 @@
+/* === TalkDB Enterprise Styles === */
+/* Inspired by Shield Insurance / Credit Assessment dashboard patterns */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
+
+html, body, .stApp {
+    font-family: 'Inter', -apple-system, sans-serif !important;
+    background: #080b0e !important;
+    color: #e8eaed !important;
+}
+
+/* Hide Streamlit chrome */
+#MainMenu, footer, header, .stDeployButton,
+[data-testid="stToolbar"], [data-testid="stDecoration"] {
+    display: none !important;
+}
+
+section.main > div.block-container {
+    max-width: 1060px;
+    padding: 0 1.5rem 6rem;
+}
+
+/* === TOP HEADER BAR === */
+.header-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1.25rem 0 1rem; margin-bottom: 1rem;
+}
+.header-left { display: flex; align-items: center; gap: 12px; }
+.header-icon {
+    width: 38px; height: 38px; border-radius: 10px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 18px; box-shadow: 0 4px 16px rgba(16,185,129,0.25);
+}
+.header-text h1 {
+    font-size: 18px; font-weight: 700; color: #f1f5f9;
+    margin: 0; letter-spacing: -0.02em;
+}
+.header-text p {
+    font-size: 11px; color: #64748b; margin: 1px 0 0;
+    text-transform: uppercase; letter-spacing: 0.06em; font-weight: 500;
+}
+.header-right { display: flex; align-items: center; gap: 10px; }
+.h-chip {
+    padding: 4px 12px; border-radius: 6px; font-size: 11px;
+    font-weight: 600; letter-spacing: 0.02em;
+}
+.h-chip-meta {
+    background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+    color: #94a3b8;
+}
+.h-chip-live {
+    background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2);
+    color: #34d399;
+}
+
+/* === HERO SECTION (Welcome) === */
+.hero {
+    background: linear-gradient(135deg, rgba(16,185,129,0.06) 0%, rgba(6,182,212,0.04) 100%);
+    border: 1px solid rgba(16,185,129,0.1);
+    border-radius: 16px; padding: 3.5rem 2rem; text-align: center;
+    margin-bottom: 1.5rem; position: relative; overflow: hidden;
+}
+.hero::before {
+    content: ''; position: absolute; top: -100px; right: -100px;
+    width: 300px; height: 300px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(16,185,129,0.08), transparent 70%);
+}
+.hero h1 {
+    font-size: 32px; font-weight: 800; color: #f8fafc;
+    letter-spacing: -0.03em; margin: 0 0 8px;
+}
+.hero p {
+    font-size: 15px; color: #64748b; max-width: 440px;
+    margin: 0 auto; line-height: 1.55;
+}
+
+/* === EXAMPLE GRID === */
+.ex-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-top: 1.5rem; }
+.ex-item {
+    background: rgba(255,255,255,0.02); border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px; padding: 14px 16px; cursor: pointer; transition: all 0.15s;
+}
+.ex-item:hover {
+    border-color: rgba(16,185,129,0.3); background: rgba(16,185,129,0.04);
+    transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.ex-item .icon { font-size: 20px; margin-bottom: 6px; }
+.ex-item .text { font-size: 13px; color: #94a3b8; line-height: 1.4; }
+
+/* === USER MESSAGE === */
+.u-msg { display: flex; justify-content: flex-end; margin: 1.5rem 0; }
+.u-bubble {
+    background: linear-gradient(135deg, #10b981, #059669);
+    color: #fff; padding: 11px 18px; border-radius: 14px 14px 4px 14px;
+    font-size: 14px; font-weight: 500; line-height: 1.45;
+    max-width: 65%; box-shadow: 0 2px 12px rgba(16,185,129,0.2);
+}
+
+/* === RESPONSE CARD === */
+.resp-card {
+    background: #0d1117; border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 14px; margin: 1.5rem 0; overflow: hidden;
+}
+.resp-header {
+    display: flex; align-items: center; gap: 10px;
+    padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,0.04);
+    background: rgba(255,255,255,0.015);
+}
+.resp-avatar {
+    width: 26px; height: 26px; border-radius: 7px;
+    background: linear-gradient(135deg, #10b981, #059669);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+}
+.resp-name { font-size: 12px; font-weight: 600; color: #64748b; text-transform: uppercase; letter-spacing: 0.05em; }
+.resp-body { padding: 20px 24px; }
+
+/* === ANSWER (hero metric style) === */
+.answer-block {
+    background: rgba(16,185,129,0.05); border: 1px solid rgba(16,185,129,0.1);
+    border-radius: 10px; padding: 16px 20px; margin-bottom: 20px;
+}
+.answer-label {
+    font-size: 10px; font-weight: 700; color: #10b981;
+    text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 6px;
+}
+.answer-text { font-size: 15px; color: #e2e8f0; line-height: 1.65; }
+
+/* === SECTIONS (numbered like Credit Assessment) === */
+.section { margin-top: 20px; }
+.section-head {
+    display: flex; align-items: center; gap: 10px; margin-bottom: 10px;
+}
+.section-num {
+    width: 22px; height: 22px; border-radius: 6px;
+    background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; color: #64748b;
+}
+.section-title {
+    font-size: 11px; font-weight: 700; color: #64748b;
+    text-transform: uppercase; letter-spacing: 0.08em;
+}
+
+/* === SQL === */
+.sql-block {
+    background: #080b0e; border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 8px; overflow: hidden;
+}
+.sql-code {
+    padding: 14px 18px; font-family: 'JetBrains Mono', monospace;
+    font-size: 13px; line-height: 1.7; color: #7dd3fc;
+    white-space: pre-wrap; word-break: break-word;
+}
+
+/* === DATA TABLE === */
+.dtable { width: 100%; border-collapse: collapse; margin: 4px 0; }
+.dtable th {
+    text-align: left; padding: 10px 16px; font-size: 10px;
+    font-weight: 700; color: #64748b; text-transform: uppercase;
+    letter-spacing: 0.06em; background: rgba(255,255,255,0.02);
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+}
+.dtable td {
+    padding: 10px 16px; font-size: 13px; color: #cbd5e1;
+    border-bottom: 1px solid rgba(255,255,255,0.025);
+}
+.dtable tr:hover td { background: rgba(16,185,129,0.03); }
+.row-count {
+    font-size: 11px; color: #64748b; font-weight: 500; margin: 6px 0;
+}
+
+/* === EXPLANATION === */
+.explain {
+    background: rgba(251,191,36,0.03); border: 1px solid rgba(251,191,36,0.08);
+    border-radius: 8px; padding: 14px 18px; margin-top: 4px;
+}
+.explain-label {
+    font-size: 10px; font-weight: 700; color: #f59e0b;
+    text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 8px;
+}
+.explain-text { font-size: 13px; color: #94a3b8; line-height: 1.7; }
+
+/* === STREAMLIT OVERRIDES === */
+[data-testid="stChatInput"] textarea {
+    font-family: 'Inter', sans-serif !important; font-size: 14px !important;
+    border-radius: 12px !important; border: 1px solid rgba(255,255,255,0.08) !important;
+    background: #0d1117 !important; color: #e8eaed !important;
+    padding: 14px 16px !important;
+}
+[data-testid="stChatInput"] textarea:focus {
+    border-color: rgba(16,185,129,0.4) !important;
+    box-shadow: 0 0 0 3px rgba(16,185,129,0.1) !important;
+}
+[data-testid="stChatInput"] button {
+    background: linear-gradient(135deg, #10b981, #059669) !important;
+    border-radius: 10px !important; border: none !important;
+}
+.stButton > button {
+    background: rgba(255,255,255,0.02) !important;
+    border: 1px solid rgba(255,255,255,0.06) !important;
+    color: #94a3b8 !important; border-radius: 10px !important;
+    font-family: 'Inter', sans-serif !important; font-size: 13px !important;
+    font-weight: 500 !important; padding: 12px 14px !important;
+    transition: all 0.15s !important;
+}
+.stButton > button:hover {
+    border-color: rgba(16,185,129,0.3) !important;
+    background: rgba(16,185,129,0.05) !important;
+    color: #d1fae5 !important;
+}
+.stPlotlyChart {
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px; overflow: hidden; margin-top: 10px;
+}
+section[data-testid="stSidebar"] {
+    background: #0a0d10; border-right: 1px solid rgba(255,255,255,0.06);
+}
+.stSpinner > div > div { border-top-color: #10b981 !important; }

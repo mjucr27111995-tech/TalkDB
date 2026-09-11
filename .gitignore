@@ -1,0 +1,7 @@
+.env
+*.db
+.talkdb_chroma/
+.talkdb_qdrant/
+__pycache__/
+*.pyc
+.venv/
